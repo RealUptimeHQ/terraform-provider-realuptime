@@ -1,0 +1,21 @@
+# Unit tests on every push to the public mirror. Acceptance tests (TF_ACC)
+# are not run here: they need a live account and a read_write key.
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go mod download
+      - run: go vet ./...
+      - run: go test ./... -timeout 5m
