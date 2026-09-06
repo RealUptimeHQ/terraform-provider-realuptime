@@ -3,9 +3,11 @@
 Manage [RealUptime](https://realuptime.io) monitors, status pages, status page
 components and notification channels as code.
 
-**Status: source available; Terraform Registry publish pending.** Until the
-provider is on the Registry, build it locally and use a `dev_overrides`
-block (below). The Registry address will be `RealUptimeHQ/realuptime`.
+**Status: live on the Terraform Registry** at
+[registry.terraform.io/providers/RealUptimeHQ/realuptime](https://registry.terraform.io/providers/RealUptimeHQ/realuptime).
+`terraform init` resolves the source address `RealUptimeHQ/realuptime`
+directly; no `dev_overrides` block is needed. Building locally (below) is
+only for contributors.
 
 ## Resources and data sources
 
@@ -61,7 +63,7 @@ resource "realuptime_status_page_component" "api" {
 
 More in [`examples/`](./examples).
 
-## Building and using locally (before the Registry publish)
+## Building and using locally (contributors)
 
 ```sh
 go build -o terraform-provider-realuptime .
