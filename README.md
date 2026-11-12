@@ -27,7 +27,7 @@ Full attribute reference: [`docs/`](./docs) (generated from the schemas by
 ## Requirements
 
 - Terraform 1.5+ (protocol 6)
-- A RealUptime API key with **read_write** permission on a Growth or Scale
+- A RealUptime API key with **read_write** permission, on any
   plan, exported as `REALUPTIME_API_KEY`. Generate one from the dashboard's
   API & MCP access section.
 
@@ -97,10 +97,9 @@ resources named `tf-acc-<n>` on the account the key belongs to.
 
 ## Releasing (maintainers)
 
-Releases are cut from the public mirror repo by GoReleaser on a `v*` tag
-(`.github/workflows/release.yml`, `.goreleaser.yml`), signed with the GPG key
-registered on the Terraform Registry. See `scripts/publish-terraform-provider.mjs`
-in the monorepo for the mirror step and the remaining manual Registry steps.
+Releases are cut by GoReleaser on a `v*` tag (`.github/workflows/release.yml`,
+`.goreleaser.yml`), signed with the GPG key registered on the Terraform
+Registry.
 
 ## License
 

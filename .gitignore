@@ -3,3 +3,4 @@ terraform-provider-realuptime
 .terraform/
 .terraform.lock.hcl
 *.tfstate*
+node_modules/

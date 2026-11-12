@@ -63,8 +63,8 @@ func (r *statusPageResource) Metadata(_ context.Context, req resource.MetadataRe
 func (r *statusPageResource) Schema(_ context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		MarkdownDescription: "A public status page (`POST /status-pages`, `PATCH /status-pages/{id}`). Every account " +
-			"gets one page at signup; this resource creates ADDITIONAL pages (Free includes one page, Growth and " +
-			"Scale unlimited: RU-2006 otherwise). Import the signup page by id to manage it here. Deleting a page " +
+			"gets one page at signup; this resource creates ADDITIONAL pages (Free includes one page, Pro and " +
+			"Business unlimited: RU-2006 otherwise). Import the signup page by id to manage it here. Deleting a page " +
 			"removes everything published on it (components, incidents, maintenance windows, subscribers); the " +
 			"account's last page cannot be deleted (RU-5011). Custom domains and passwords are managed from the dashboard.",
 		Attributes: map[string]schema.Attribute{

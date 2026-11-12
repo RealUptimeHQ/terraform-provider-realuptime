@@ -47,8 +47,8 @@ func (p *realuptimeProvider) Metadata(_ context.Context, _ provider.MetadataRequ
 func (p *realuptimeProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		MarkdownDescription: "Manage RealUptime monitors (checks), status pages, status page components and " +
-			"notification channels through the REST API v1. The REST API is available on the Growth and Scale " +
-			"plans; generate an API key with **read_write** permission from the dashboard's API & MCP access " +
+			"notification channels through the REST API v1. The REST API is available on every " +
+			"plan; generate an API key with **read_write** permission from the dashboard's API & MCP access " +
 			"section (a read-only key can only read).",
 		Attributes: map[string]schema.Attribute{
 			"api_key": schema.StringAttribute{
@@ -96,7 +96,7 @@ func (p *realuptimeProvider) Configure(ctx context.Context, req provider.Configu
 	if apiKey == "" {
 		resp.Diagnostics.AddAttributeError(path.Root("api_key"), "Missing API key",
 			"Set api_key in the provider block or export REALUPTIME_API_KEY. Generate a read_write key from the "+
-				"RealUptime dashboard's API & MCP access section (Growth or Scale plan).")
+				"RealUptime dashboard's API & MCP access section.")
 		return
 	}
 

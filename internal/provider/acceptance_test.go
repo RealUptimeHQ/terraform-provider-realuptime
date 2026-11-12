@@ -14,7 +14,7 @@ import (
 // Acceptance tests run real plans against a live API and need:
 //
 //	TF_ACC=1                      (terraform-plugin-testing's own gate)
-//	REALUPTIME_API_KEY=ru_live_... a read_write key on a Growth/Scale account
+//	REALUPTIME_API_KEY=ru_live_... a read_write key
 //	REALUPTIME_API_URL=...        optional; defaults to production. For a
 //	                              local dev server: http://localhost:3000/api/v1
 //	REALUPTIME_ACC_CHECK_ID=...   optional; an existing http check id to

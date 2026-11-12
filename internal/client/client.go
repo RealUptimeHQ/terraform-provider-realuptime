@@ -8,7 +8,7 @@
 // Authentication is the same bearer key the CLI and MCP server use:
 // `Authorization: Bearer ru_live_...`, from the REALUPTIME_API_KEY
 // environment variable or the provider block. The REST API is available on
-// Growth and Scale plans; a read-only key can read but every Create/Update/
+// every plan; a read-only key can read but every Create/Update/
 // Delete here needs a read_write key (RU-1004 otherwise).
 package client
 

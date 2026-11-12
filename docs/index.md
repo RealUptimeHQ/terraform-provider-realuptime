@@ -8,9 +8,9 @@ description: |-
 
 # realuptime Provider
 
-Manage RealUptime monitors (checks), status pages, status page components and notification channels through the REST API v1. The REST API is available on the Growth and Scale plans; generate an API key with **read_write** permission from the dashboard's API & MCP access section (a read-only key can only read).
+Manage RealUptime monitors (checks), status pages, status page components and notification channels through the REST API v1. The REST API is available on every plan; generate an API key with **read_write** permission from the dashboard's API & MCP access section (a read-only key can only read).
 
-Source: the `packages/terraform-provider-realuptime` directory of the RealUptime monorepo, mirrored to [github.com/RealUptimeHQ/terraform-provider-realuptime](https://github.com/RealUptimeHQ/terraform-provider-realuptime). Every attribute is hand-mapped from the OpenAPI 3.1 document at `https://realuptime.io/api/v1/openapi.json`; field names are the API's own. REST API reference: https://docs.realuptime.io/api.
+Source: [github.com/RealUptimeHQ/terraform-provider-realuptime](https://github.com/RealUptimeHQ/terraform-provider-realuptime). Every attribute is hand-mapped from the OpenAPI 3.1 document at `https://realuptime.io/api/v1/openapi.json`; field names are the API's own. REST API reference: https://docs.realuptime.io/api.
 
 ## Example Usage
 
